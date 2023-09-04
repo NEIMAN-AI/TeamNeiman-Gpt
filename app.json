@@ -1,0 +1,59 @@
+{
+    "name": "Chat-Gpt",
+    "description": "A Telegram Chatgpt bot.",
+    "logo": "https://te.legra.ph/file/d600a52e8f4578427e565.jpg",
+    "keywords": [
+    "telegram",
+    "chatgpt",
+    "python",
+    "pyrogram"
+  ],
+    "buildpacks": [{
+    "url": "heroku/python"
+  }],
+  "repository": "https://github.com/Radhak8/ChatGpt",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "your telegram bot token here. get it from @botfather",
+            "required": true
+        },        
+        "OPENAI_KEY": {
+            "description":"OPEN-AI key here: extract from https://platform.openai.com/account/api-keys",
+            "required": true
+        },
+        "BOT_USERNAME": {
+            "description": "telegram bot username without @",
+            "required": false
+        },
+        "BOT_NAME": {
+            "description": "Do not use Modified Text..",
+            "required": false
+        },
+        
+        "SUPPORT_GRP": {
+            "description": "Your Support Chat without @",
+            "required": false
+        },
+        "STKR": {
+            "description": "Sticker for start message",
+            "required": false
+        },
+        "START_IMG": {
+            "description": "Start Image For Bot.",
+            "required": false
+        },
+        "API_ID": {
+            "description": "telegram api id.",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "telegram api hash",
+            "required": true
+        }
+    },
+    "addons": [
+        {
+            "plan": "heroku-postgresql"
+        }
+    ]
+}
